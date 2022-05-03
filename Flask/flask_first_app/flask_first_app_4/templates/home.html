@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	{{data}}
+	<h1>Home Page</h1>
+
+	<h3>This is user information<h3>
+
+	<table border = "1" width = "50%" cellspacing = "10" cellpadding = "10">
+
+		<thead>
+			<th>Name</th>
+			<th>Gender</th>
+			<th>Address</th>
+			<th>Email</th>
+			<th>age</th>
+			<th>Technology</th>
+		</thead>
+			{% for user in data %}
+				<tr>
+					<td>{{user[0]}}</td>
+					<td>{{user[1]}}</td>
+					<td>{{user[2]}}</td>
+					<td>{{user[3]}}</td>
+					<td>{{user[4]}}</td>
+					<td>{{user[5]}}</td>
+				</tr>
+			{% endfor %}
+	</table>
+{% endblock content %}
+

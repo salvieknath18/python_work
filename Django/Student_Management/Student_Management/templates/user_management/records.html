@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<br>
+    <table class="table table-light table-bordered table-striped">
+        <tbody>
+
+        <tr>
+            <th>Date and Time</th>
+            <th>Roll No. of Present students</th>
+        </tr>
+        {% for record in records %}
+        <tr>
+            <td>{{record.completeDateTime}}</td>
+            <td>{{record.studentList}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</br>
+</br>
+    <form method="POST" action="{% url 'student_attendance_report' %}">
+        {% csrf_token %}
+        <label>Enter The Roll number to Generate Attendance Report</label>
+        <input type="number" name="rollnumber">
+        <button type="submit" class="btn btn-success">Generate Report</button>
+    </form>
+{% endblock content %}

@@ -1,0 +1,31 @@
+@app.route('/')
+def index():
+   return render_template('index.html')
+This HTML page contains one text input.
+
+<html>
+   <body>
+      <form action = "/setcookie" method = "POST">
+         <p><h3>Enter userID</h3></p>
+         <p><input type = 'text' name = 'nm'/></p>
+         <p><input type = 'submit' value = 'Login'/></p>
+      </form>
+   </body>
+</html>
+The Form is posted to ‘/setcookie’ URL. The associated view function sets a Cookie name userID and renders another page.
+
+@app.route('/setcookie', methods = ['POST', 'GET'])
+def setcookie():
+   if request.method == 'POST':
+   user = request.form['nm']
+   
+   resp = make_response(render_template('readcookie.html'))
+   resp.set_cookie('userID', user)
+   
+   return resp
+‘readcookie.html’ contains a hyperlink to another view function getcookie(), which reads back and displays the cookie value in browser.
+
+@app.route('/getcookie')
+def getcookie():
+   name = request.cookies.get('userID')
+   return '<h1>welcome '+name+'</h1>'

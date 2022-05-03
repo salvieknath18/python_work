@@ -1,0 +1,52 @@
+2019-11-19 08:24:12,608:INFO:operation started
+2019-11-19 08:24:12,608:INFO:adding started
+2019-11-19 08:24:12,608:ERROR:Got an error while addng: Not Integer Value
+2019-11-19 08:24:12,608:DEBUG:Add: b + a = None
+2019-11-19 08:24:12,608:WARNING:division started, please dont give 0 number
+2019-11-19 08:24:12,608:ERROR:Got an error while division: unsupported operand type(s) for /: 'str' and 'str'
+Traceback (most recent call last):
+  File "D:/Python/Python IMP/Link Codes/logging/LoggingBasics.py", line 42, in divide
+    result = x / y
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+2019-11-19 08:24:12,608:DEBUG:Div: b / a = None
+2019-11-19 08:25:06,765:INFO:operation started
+2019-11-19 08:25:06,765:INFO:adding started
+2019-11-19 08:25:06,765:ERROR:Got an error while addng: unsupported operand type(s) for +: 'int' and 'str'
+2019-11-19 08:25:06,765:DEBUG:Add: 10 + a = None
+2019-11-19 08:25:06,765:WARNING:division started, please dont give 0 number
+2019-11-19 08:25:06,765:ERROR:Got an error while division: unsupported operand type(s) for /: 'int' and 'str'
+Traceback (most recent call last):
+  File "D:/Python/Python IMP/Link Codes/logging/LoggingBasics.py", line 42, in divide
+    result = x / y
+TypeError: unsupported operand type(s) for /: 'int' and 'str'
+2019-11-19 08:25:06,765:DEBUG:Div: 10 / a = None
+2019-11-19 08:25:58,235:INFO:operation started
+2019-11-19 08:25:58,235:INFO:adding started
+2019-11-19 08:25:58,235:ERROR:Got an error while addng: unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "D:/Python/Python IMP/Link Codes/logging/LoggingBasics.py", line 25, in add
+    z=x+y
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2019-11-19 08:25:58,235:DEBUG:Add: 10 + a = None
+2019-11-19 08:25:58,235:WARNING:division started, please dont give 0 number
+2019-11-19 08:25:58,235:ERROR:Got an error while division: unsupported operand type(s) for /: 'int' and 'str'
+Traceback (most recent call last):
+  File "D:/Python/Python IMP/Link Codes/logging/LoggingBasics.py", line 42, in divide
+    result = x / y
+TypeError: unsupported operand type(s) for /: 'int' and 'str'
+2019-11-19 08:25:58,235:DEBUG:Div: 10 / a = None
+2019-11-19 08:26:20,317:INFO:operation started
+2019-11-19 08:26:20,317:INFO:adding started
+2019-11-19 08:26:20,317:ERROR:Got an error while addng: Not Integer Value
+Traceback (most recent call last):
+  File "D:/Python/Python IMP/Link Codes/logging/LoggingBasics.py", line 27, in add
+    raise StringNotAllowed("Not Integer Value")
+StringNotAllowed: Not Integer Value
+2019-11-19 08:26:20,317:DEBUG:Add: b + a = None
+2019-11-19 08:26:20,317:WARNING:division started, please dont give 0 number
+2019-11-19 08:26:20,317:ERROR:Got an error while division: unsupported operand type(s) for /: 'str' and 'str'
+Traceback (most recent call last):
+  File "D:/Python/Python IMP/Link Codes/logging/LoggingBasics.py", line 42, in divide
+    result = x / y
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+2019-11-19 08:26:20,317:DEBUG:Div: b / a = None

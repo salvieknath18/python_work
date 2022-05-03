@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dishes Information</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+        function getidf(method){
+            var id = prompt("Enter ID")
+            location.href='/dishesCRUD/'+method+'/'+id+'/'
+        }
+        function hideDisableFunction(addDiv){
+            document.getElementById(addDiv).style.display = "";
+        }
+    </script>
+</head>
+<body>
+<h1>Dishes Admin Panel</h1>
+    <input type="button" value="Get Dish By ID" onclick="getidf('get');">
+    <input type="button" value="Add New Dish" onclick="hideDisableFunction('addDiv');">
+    <input type="button" value="Update Dish" onclick="getidf('update');">
+    <input type="button" value="Delete Dish" onclick="getidf('delete');">
+
+<div id="addDiv" style="display:none;">
+    <h2>Please Fill The information</h2>
+    <form method="post" action="/dishesCRUD/add/1/" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Add Dish">
+    </form>
+</div>
+<!--{{restaurantsidname}}
+{{dishesList}}-->
+<h1>Dishes Details</h1>
+<table>
+    {% for item in dishesList %}
+    <tr>
+        <td>
+            <a href="/restaurantCRUD/get/{{item.id}}">
+            <label>Dish ID : </label>{{item.id}}</br>
+            <label>Dish Name : </label>{{item.name}}</br>
+            </a>
+            <label>Price : </label>{{item.price}}</br>
+            <label>Availabe in restaurents : </label></br>
+            {% for rest in item.restaurant %}
+                    {% for key,value in restaurantsidname.items%}
+                        {% if key == rest %}
+                            <a href="/restaurantCRUD/get/{{rest}}/">{{value}}</a>
+                        {% endif %}
+                    {% endfor %}
+                 </br>
+            {% endfor %}
+
+        </td>
+        <td>
+            <input type="button" value="Update Dish" onclick="location.href='/dishesCRUD/update/{{item.id}}'">
+            <input type="button" value="Delete Dish" onclick="location.href='/dishesCRUD/delete/{{item.id}}'">
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

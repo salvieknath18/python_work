@@ -1,0 +1,91 @@
+
+<!-- saved from url=(0026)http://192.168.43.43:7000/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+	.para {color:red;}
+	
+	h1 {text-align:center;
+		font-family;arial;
+		border:3px solid purple;}
+	
+	#username {color:orange;}
+	
+	#password {color:yellow;}
+	
+	#gender {color:green;}
+	
+	#male {color:#D13C3C;}
+	
+	#female {color:#413CD1;}
+	
+	#other {color:#071C4D;}
+	
+	#upload {color:brown;}
+	
+	#feed {color:blue;}
+
+	body {background-image:url(flight.jpg);
+		background-size:cover;
+		color:purple;}
+		
+	form {text-align:center;}
+
+</style> 
+
+<title>
+This is my website sucker!
+</title>
+<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+<body>
+<h1>User Details</h1>
+<script type="text/javascript">
+function f1(){
+	alert("details submitted successfully!");
+	}
+
+</script>
+<form action="http://192.168.43.43:7000/submit.txt" method="post">
+	<div id="username">Username: <input type="text" name="username" value="first name" maxlength="20"></div>
+	<br>
+	<br>
+	<div id="Password">Password:<input type="password" name="passwd" value="password" maxlength="16"></div>
+	<br>
+	<br>
+	<div id="gender">Gender:</div>
+	<div id="male">male<input type="radio" name="sex" value="male"></div>
+	<div id="female">female<input type="radio" name="sex" value="female"></div>
+	<div id="other">other <input type="radio" name="sex" value="other"></div>
+	<p class="para"> select what you want to order:</p>
+	paneer<input type="checkbox" name="food" value="panner">
+	chole kulche<input type="checkbox" name="food" value="chole kulche">
+	ras malai<input type="checkbox" name="food" value="ras malai">
+	kaju kachodi <input type="checkbox" name="food" value="kaju kachodi">
+	<br>
+	<br>
+	<br>
+	city in which you live:
+		<select name="cities">
+		<option value="choose the city">choose the city</option>
+		<option value="mumbai">mumbai</option>
+		<option value="pune">pune</option>
+		<option value="nagpur">nagpur</option>
+		<option value="nashik">nashik</option>
+		<option value="aurangabad">aurangabad</option>
+		</select>
+	<br>
+	<br>
+	<div id="upload">upload your photo:</div>
+	<input type="file" name="ashokfile">
+	<br>
+	<br>
+	<div id="feed">feedback about the site:</div>
+	<br>
+	<textarea name="tell" rows="5" cols="40">	write here
+	</textarea>
+	<br>
+	<br>
+	<input type="button" value="submit" onclick="f1()">
+	<input type="reset">
+</form>
+
+</body></html>

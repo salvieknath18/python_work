@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<br>
+    <table class="table table-light table-bordered table-striped">
+        <tbody>
+        <tr>
+            <th>First Name</th>
+            <td>{{userprofile.profile.firstname}}</td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td>{{userprofile.profile.lastname}}</td>
+        </tr>
+        <tr>
+            <th>Photo</th>
+            {% if userprofile.profile.profileimage %}
+            <td><img src="{{userprofile.profile.profileimage.url}}" width="250"></td>
+            {% endif %}
+        </tr>
+        {% if user.profile.profilerole.name == "Student"  %}
+        <tr>
+            <th>Roll No.</th>
+            <td>{{userprofile.profile.rollnumber}}</td>
+        </tr>
+        {% endif %}
+        <tr>
+            <th>User Type</th>
+            <td>{{userprofile.profile.profilerole}}</td>
+        </tr>
+    </tbody>
+    </table>
+    <div class="text-right">
+        <a class="btn btn-warning" href="{% url 'profile_edit' userprofile.profile.id %}">Edit</a>
+        <a class="btn btn-danger" href="{% url 'user_delete' userprofile.profile.id %}">Delete</a>
+    </div>
+{% endblock content %}

@@ -1,0 +1,12 @@
+https://www.softwaretestinghelp.com/test-automation-interview-questions/
+
+https://www.softwaretestinghelp.com/selenium-interview-questions-answers/
+
+https://www.guru99.com/python-interview-questions-answers.html
+
+https://www.techbeamers.com/selenium-python-quiz/
+
+https://www.simplilearn.com/selenium-interview-questions-and-answers-article
+
+
+1st Round: Python based questions were like below, 1. given 2 sides of a triangle write a program to find the 3rd side of the triangle. 2. program to use the default arguments in the function. 3. program to create a stack and to access them. and few more. 2nd Round: define BUG? Explain Testing life cycle? Explain Bug life cycle? Write a program to access the file and to fetch the ip address and to validate the ip address. If i provide you the requirement how will you decide which one to use whether list, dict or tuple etc. Questions related to regular expression. how to access digits, strings and to get the count of repeated strings in a file. etc..

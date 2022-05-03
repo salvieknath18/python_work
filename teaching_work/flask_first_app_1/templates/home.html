@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+	<h1>Home {{data.i_name}} Page</h1>
+
+	<h3>This is {{data.i_name}} information</h3>
+	{% for st in data.sdata %}
+		{{st[0]}}
+		{{st[1]}}
+		{{st[2]}}
+	{% endfor %}
+
+	<table border = "1" width = "50%" cellspacing = "10" cellpadding = "10">
+
+		<thead>
+			<th>name</th>
+			<th>phone no</th>
+			<th>age</th>
+		</thead>
+		{% for student in data.sdata %}
+			{% if student.age < 20 %}
+			<tr>
+				<td>{{student.name}}</td>
+				<td>{{student.ph}}</td>
+				<td>{{student.age}}</td>
+			</tr>
+			{% endif %}
+		{% endfor %}	
+	</table>
+{% endblock content %}
+

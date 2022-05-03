@@ -1,0 +1,14 @@
+<html>
+<head>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
+<title>
+website
+</title>
+</head>
+<body>
+<strong style="font-size:25px"><a href = "{{ url_for('info') }}">home</a></strong>
+<strong style="font-size:25px"><a href = "{{ url_for('about') }}">about us</a></strong>
+<strong style="font-size:25px"><a href = "{{ url_for('contact') }}">contact us</a></strong>
+	{% block content %}{% endblock %}
+</body>
+</html>

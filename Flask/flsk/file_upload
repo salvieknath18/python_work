@@ -1,0 +1,27 @@
+from flask import Flask, render_template
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+   return render_template("index.html")
+
+if __name__ == '__main__':
+   app.run(debug = True)
+The HTML script of index.html is given below.
+
+<html>
+   <head>
+      <script type = "text/javascript" 
+         src = "{{ url_for('static', filename = 'hello.js') }}" ></script>
+   </head>
+   
+   <body>
+      <input type = "button" onclick = "sayHello()" value = "Say Hello" />
+   </body>
+</html>
+hello.js contains sayHello() function.
+
+function sayHello() {
+   alert("Hello World")
+}
+ Previous Page 

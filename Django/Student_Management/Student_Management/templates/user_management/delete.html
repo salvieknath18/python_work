@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<br>
+    <form method="post" action="{% url 'user_delete' userprofile.profile.user_id %}">
+        {% csrf_token %}
+        <p>Are you sure to delete this User?</p>
+        <h2>{{userprofile.profile.firstname}} &nbsp; {{userprofile.profile.lastname}}</h2>
+        <input type="submit" value="Yes">
+    </form>
+{% endblock content %}

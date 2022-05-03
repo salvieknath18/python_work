@@ -1,0 +1,5 @@
+ABCD 45 infosys 75000 product owner
+CHANDU 22 IBM 50000 manager
+Ashok 26 infosys 40000 product owner
+Yuvraj 30 Google 100000 Developer
+Swapnali 28 Amazon 75000 manager

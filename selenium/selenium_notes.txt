@@ -1,0 +1,63 @@
+Section 1:
+Why Selenium
+	Adv
+	Free
+	Support Multiple Languages
+	Support Multiple browsers
+	Execute Test cases parallel
+	Dis Adv
+	support web based applications
+	Programming skills mandatory
+	
+ciomponent of Selenium	
+	Selenium IDE
+		Plugin for firefox and chrome browsers
+		Support Record and play
+		
+	Selenium RC
+		Can execute test cases on different browsers
+		
+	Selenium Webdriver
+		Alternative of selenium RC
+		
+	Selenium Grid
+		Execute Testcases parallel
+		
+
+Setup Selenium IDE:
+	download selenium IDE for chrome and Firefox
+	Adding plugin in browser shows option on browser
+	
+	
+Section 2:	
+Record and play Through selenium IDE
+
+css and xpth checkerInstall Selenium IDE on browser
+
+Record Testcase in Selenium IDE
+
+Locate Element in selenium IDE
+Locate Element By:
+	ID:
+	Name:
+	Link:
+	Class Name:
+	CSS Syntax:
+		#id & htmlelement#id
+		.class & htmlelement.class
+
+//input[@type='submit']
+//input[@name='firsname' or @aria-label='Firstname']
+//input[@name='birthday_day' and @title='Day']
+//div[text()='Create a new account']
+//a[text()='Create a page']
+//div[contains(text(),'new account')]
+//input[@type='password']
+//input[contains(@type,'pass')]
+//table[@role='presentation']
+//table[@role='presentation']/tbody/tr[2]/td[1]/input
+//input[@type='email']/parent::td/parent::tr/parent::tbody/parent::table
+//input[@id='tab2']/following-sibling::label
+//input[@id='email']/parent::td/following-sibling::td[1]/input
+
+from selenium.webdriver.support.select import Select

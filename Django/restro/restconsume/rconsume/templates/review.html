@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Reviews</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+</head>
+<body>
+<h1>Restaurants Reviews {{restName}}</h1>
+<table>
+    {% for item in reviewList %}
+    <tr>
+        <td>
+            {{item}}
+        </td>
+        <td>
+                <input type="button" value="Update Restaurant" onclick="location.href='/restaurantCRUD/update/{{item.id}}'">
+                <input type="button" value="Delete Restaurant" onclick="location.href='/restaurantCRUD/delete/{{item.id}}'">
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<div>
+    <h2>Add Your Comment</h2>
+    <form method="post" action="/restaurantReview/add/1/">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Add Review">
+    </form>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+hello! python
+this is program
+to count the word
+python 
+how many times we have
+python word in this text
+as python

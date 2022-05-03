@@ -1,0 +1,7 @@
+this is the program
+is to count the word
+hello this is
+testing 1
+statement 1
+statement 2
+statement 3

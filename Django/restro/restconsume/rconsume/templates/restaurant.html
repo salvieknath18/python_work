@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Information</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+        function getidf(method){
+            var id = prompt("Enter ID")
+            location.href='/restaurantCRUD/'+method+'/'+id+'/'
+        }
+        function hideDisableFunction(addDiv){
+            document.getElementById(addDiv).style.display = "";
+        }
+    </script>
+</head>
+<body>
+<h1>Restaurants Admin Panel</h1>
+    <input type="button" value="Get Restaurant By ID" onclick="getidf('get');">
+    <input type="button" value="Add New Restaurant" onclick="hideDisableFunction('addDiv');">
+    <input type="button" value="Update Restaurant" onclick="getidf('update');">
+    <input type="button" value="Delete Restaurant" onclick="getidf('delete');">
+
+<div id="addDiv" style="display:none;">
+    <h2>Please Fill The information</h2>
+    <form method="post" action="/restaurantCRUD/add/1/">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Add Restaurant">
+    </form>
+</div>
+
+<h1>Restaurants Details</h1>
+<table>
+    {% for item in restaurantsList %}
+    <tr>
+        <td>
+            <a href="/restaurantCRUD/get/{{item.id}}">
+            <label>Restaurant ID : </label>{{item.id}}</br>
+            <label>Restaurant Name : </label>{{item.name}}</br>
+            </a>
+            <label>Street : </label>{{item.street}}</br>
+            <label>City : </label>{{item.city}}</br>
+            <label>Contact : </label>{{item.telephone}}</br>
+            <label>Website : </label><a href="{{item.url}}">{{item.url}}</a></br>
+
+        </td>
+        <td>
+            <table>
+            <tr>
+                <input type="button" value="Update Restaurant" onclick="location.href='/restaurantCRUD/update/{{item.id}}'">
+                <input type="button" value="Delete Restaurant" onclick="location.href='/restaurantCRUD/delete/{{item.id}}'">
+            </tr>
+            <tr>
+                <input type="button" value="View Restaurent Review" onclick="location.href='/restaurantReview/{{item.id}}'">
+            </tr>
+            </table>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
